@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail Page - KUSUM HOUSE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#584140",
+                      "tertiary-container": "#cba72f",
+                      "primary-fixed": "#ffdad7",
+                      "background": "#fff8f7",
+                      "inverse-surface": "#3b2d2c",
+                      "tertiary-fixed": "#ffe088",
+                      "outline-variant": "#dfbfbd",
+                      "surface-tint": "#aa3434",
+                      "on-tertiary-container": "#4e3d00",
+                      "secondary": "#5e5f5c",
+                      "on-surface": "#251918",
+                      "surface-container-highest": "#f4dddb",
+                      "primary-fixed-dim": "#ffb3ae",
+                      "surface-bright": "#fff8f7",
+                      "on-tertiary-fixed": "#241a00",
+                      "primary-container": "#7a0e16",
+                      "secondary-fixed": "#e3e2df",
+                      "inverse-on-surface": "#ffedeb",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#891b1f",
+                      "on-error": "#ffffff",
+                      "outline": "#8b716f",
+                      "inverse-primary": "#ffb3ae",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#464744",
+                      "secondary-fixed-dim": "#c7c7c3",
+                      "on-secondary-container": "#626360",
+                      "on-primary-container": "#ff817c",
+                      "on-background": "#251918",
+                      "surface-container-high": "#fae3e1",
+                      "primary": "#550008",
+                      "surface-variant": "#f4dddb",
+                      "tertiary": "#735c00",
+                      "surface-dim": "#ecd5d3",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "surface-container-low": "#fff0ef",
+                      "surface": "#fff8f7",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-container": "#e0e0dc",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410005",
+                      "surface-container": "#ffe9e7",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "unit-base": "8px",
+                      "container-max": "1440px",
+                      "edge-margin": "48px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "label-uppercase": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-uppercase": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-family: 'Material Symbols Outlined';
+            font-weight: normal;
+            font-style: normal;
+            font-size: 24px;
+            line-height: 1;
+            letter-spacing: normal;
+            text-transform: none;
+            display: inline-block;
+            white-space: nowrap;
+            word-wrap: normal;
+            direction: ltr;
+            -webkit-font-feature-settings: 'liga';
+            -webkit-font-smoothing: antialiased;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar (Semantic Shell: Always visible for global nav unless suppressed) -->
+<nav class="bg-background/85 dark:bg-background/85 backdrop-blur-xl text-primary dark:text-primary-fixed-dim font-label-uppercase text-label-uppercase fixed top-0 w-full z-50 bg-transparent shadow-sm dark:shadow-none flex justify-between items-center px-edge-margin h-20 max-w-container-max mx-auto">
+<div class="flex items-center gap-gutter">
+<span class="font-display-xl text-display-xl text-primary dark:text-primary-fixed tracking-tighter cursor-pointer">k</span>
+<div class="hidden md:flex gap-gutter ml-8">
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300 hover:text-tertiary transition-all duration-300" href="#">Sarees</a>
+<a class="text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1 hover:text-tertiary transition-all duration-300" href="#">Kurtis</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300 hover:text-tertiary transition-all duration-300" href="#">Co-ord Sets</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300 hover:text-tertiary transition-all duration-300" href="#">Lehengas</a>
+<a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300 hover:text-tertiary transition-all duration-300" href="#">Festive</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button aria-label="favorite" class="scale-95 active:scale-90 transition-transform hover:text-tertiary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button aria-label="shopping_bag" class="scale-95 active:scale-90 transition-transform hover:text-tertiary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button aria-label="person" class="scale-95 active:scale-90 transition-transform hover:text-tertiary transition-all duration-300">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</nav>
+<main class="max-w-container-max mx-auto px-edge-margin py-12 md:py-24">
+<!-- Breadcrumbs -->
+<div class="flex items-center gap-2 text-on-surface-variant font-label-uppercase text-label-uppercase mb-8">
+<a class="hover:text-primary transition-colors" href="#">Home</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Kurtis</a>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+<span class="text-primary">Crimson Silk Anarkali</span>
+</div>
+<!-- Product Presentation -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Image Gallery (Bento-style asymmetric layout) -->
+<div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2 aspect-[4/5] bg-surface-container-lowest rounded-DEFAULT overflow-hidden group cursor-zoom-in relative shadow-sm">
+<img alt="Full length view of the Crimson Silk Anarkali" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-fashion editorial photograph of a modern woman wearing a luxurious crimson silk Anarkali kurti. The setting is a minimalist, spacious atelier with soft, ambient daylight illuminating the intricate gold zari embroidery. The mood is sophisticated and elegant, emphasizing the contemporary heritage aesthetic. The deep maroon fabric contrasts beautifully against a pristine ivory background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBa9mcs61zKWT-IkFGZDlcpvvZqzKY_OSayZFSByvpfJ-3NbRJ8GXrQI-W4OSIbn1hHpLqciwP3vMM8VdCHKwhy68GxSUEz8Hxt_x_XsJHn4ns-AqAHyof62M3YQeb7AfUkOUapsSjCJY3v1B93KiGSWvTs1t3q78hEgD_C2abwsHo74LVGqr8pkAafiEBBUVSYQ1ch9DY3rFGxJMFdovSlQ04emJ5VGYovQdVv6kSwf3PV9DNfw34jvnLElsDtvZC9j5e46HwUU8E"/>
+</div>
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-DEFAULT overflow-hidden group cursor-zoom-in shadow-sm">
+<img alt="Detail shot of the embroidery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Close-up macro photography of delicate gold zari embroidery on deep crimson silk fabric. The lighting is soft and directional, highlighting the texture and sheen of the threads against the rich background. The image evokes a sense of high-end craftsmanship and luxury, fitting the contemporary heritage style. Focus is extremely sharp on the intricate floral patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDkhfRicebllAWy8D4NPuKFxhB94oQceLzCA4rZKezj5Roid8Nz8zq606ITlxshfs93hjRrFEJkCi_9evoFSgUiicR2gjEGD1lh1BzIr8ymiMxfymv_uJOmeI2oV5wSB7AcTCODk_1L9n_XxUVc25i6d32YHGE0XZQhCFMsA_UQNpwS71Tist6Go5hz-u3teO0djEw456NwuUMHuNNuySndFruz63INiIvARajO2ffGGuYjNclbu9i125nWjMgbZMdRJTlTn0dSBY"/>
+</div>
+<div class="aspect-[3/4] bg-surface-container-lowest rounded-DEFAULT overflow-hidden group cursor-zoom-in shadow-sm">
+<img alt="Back view of the Anarkali" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A sophisticated back-view shot of a model wearing a crimson silk Anarkali kurti. The elegant drape and flow of the fabric are captured in mid-movement within a minimalist, well-lit studio space. The atmosphere is serene and premium, showcasing the garment's silhouette and refined detailing against a neutral, soft beige backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCD47ly-_5ZWU3iCHJZszGZ6ZjjVjieaE_vb6cRzP47VcVabx5yXJpnzLVVJ4aQd6L3coQi-zPKWl_fjv2SyQRuIEBq6feOTjWu8WgbyOuBS4oYwo0zzJuHFkHEj8iibzlcwX0Kug8RjyPq8idcu7Z_6R1Wc_7qeZz_y4PwJJnw-VhusDddjXIxqlG8qmqwH3-umC_5DILdLAs_YYm9gLO1_tzBjkuRuEvwvRya_rt-G2OdW_rG5Q8ZWgPkJgBRQDWNY0xzm2Ysfpc"/>
+</div>
+</div>
+<!-- Product Details -->
+<div class="lg:col-span-5 flex flex-col pt-4 lg:pl-8">
+<h1 class="font-headline-lg text-headline-lg text-on-surface mb-2">Crimson Silk Anarkali</h1>
+<div class="flex items-center gap-4 mb-6">
+<span class="font-body-lg text-body-lg text-on-surface-variant">₹ 14,500</span>
+<div class="flex items-center text-tertiary-container gap-1">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+<span class="font-body-md text-body-md text-on-surface-variant ml-2">(24)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 leading-relaxed">
+                    A masterpiece of contemporary heritage, this Anarkali features hand-woven Banarasi silk with intricate Zardosi work. The sweeping silhouette and deep crimson hue evoke timeless elegance, perfect for evening soirées.
+                </p>
+<!-- Color Selection -->
+<div class="mb-8">
+<h3 class="font-label-uppercase text-label-uppercase text-on-surface mb-3">Color: <span class="text-on-surface-variant font-normal">Crimson Red</span></h3>
+<div class="flex gap-3">
+<button class="w-8 h-8 rounded-full bg-primary ring-2 ring-offset-2 ring-primary ring-offset-background transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#1a2b4c] border border-outline hover:ring-2 ring-offset-2 ring-[#1a2b4c] ring-offset-background transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#c0a080] border border-outline hover:ring-2 ring-offset-2 ring-[#c0a080] ring-offset-background transition-all"></button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="mb-10">
+<div class="flex justify-between items-end mb-3">
+<h3 class="font-label-uppercase text-label-uppercase text-on-surface">Size</h3>
+<button class="font-body-md text-body-md text-on-surface-variant underline underline-offset-4 hover:text-primary transition-colors text-sm">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-3">
+<button class="py-3 border border-outline rounded-DEFAULT font-body-md text-body-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">XS</button>
+<button class="py-3 border-2 border-primary rounded-DEFAULT font-body-md text-body-md text-primary bg-surface-container-lowest transition-all">S</button>
+<button class="py-3 border border-outline rounded-DEFAULT font-body-md text-body-md text-on-surface-variant hover:border-primary hover:text-primary transition-all">M</button>
+<button class="py-3 border border-outline rounded-DEFAULT font-body-md text-body-md text-on-surface-variant hover:border-primary hover:text-primary transition-all opacity-50 cursor-not-allowed">L</button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex gap-4 mb-12">
+<button class="flex-1 bg-primary text-on-primary py-4 px-6 rounded-DEFAULT font-label-uppercase text-label-uppercase hover:bg-on-primary-fixed transition-colors duration-300 shadow-sm flex items-center justify-center gap-2 group">
+                        Add to Cart
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<button class="w-14 h-14 flex items-center justify-center border border-outline text-on-surface rounded-DEFAULT hover:border-primary hover:text-primary transition-colors duration-300">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+<!-- Accordion Tabs (Fabric, Care, Delivery) -->
+<div class="border-t border-outline-variant">
+<div class="py-4 border-b border-outline-variant group cursor-pointer">
+<div class="flex justify-between items-center text-on-surface group-hover:text-primary transition-colors">
+<h4 class="font-label-uppercase text-label-uppercase">Fabric &amp; Details</h4>
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+<div class="py-4 border-b border-outline-variant group cursor-pointer">
+<div class="flex justify-between items-center text-on-surface group-hover:text-primary transition-colors">
+<h4 class="font-label-uppercase text-label-uppercase">Care Instructions</h4>
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+<div class="py-4 border-b border-outline-variant group cursor-pointer">
+<div class="flex justify-between items-center text-on-surface group-hover:text-primary transition-colors">
+<h4 class="font-label-uppercase text-label-uppercase">Delivery &amp; Returns</h4>
+<span class="material-symbols-outlined">add</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Similar Products Carousel -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-end mb-8 border-b border-outline-variant pb-4">
+<h2 class="font-headline-md text-headline-md text-on-surface">Curated For You</h2>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center border border-outline rounded-full text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center border border-outline rounded-full text-on-surface hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-highest mb-4 overflow-hidden rounded-DEFAULT relative">
+<img alt="Ivory Georgette Kurti" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A fashion portrait of an elegant ivory georgette kurti with subtle pearl embellishments. The model stands against a soft, textured beige wall in a brightly lit, contemporary setting. The luxurious aesthetic highlights the garment's fluidity and intricate handwork, fitting the minimalist yet traditional brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoIx8E33Xhr53M2Jm4SycYIrHc1gKwAwJkuxm8miIsOsUrmvlEbCQ-f8E5pBpxqeFVmjChYzVT-5o3bJWimmVzmjPRkKq9MNeREs3nRo8sqCeZ4f97RnrzsxIh2qEa7KsbmauNYvg1NapNso4raUxSogfBVX29UZEHnQUmPHEo48xYgIKc4mHw1Wa5SJ7tOBtOhG8VpunfLT8tIuunX9FEjNR0R3ok9jZepxLv4LJJ_UENaYvgZVP6eKvpQ-arwJgcx1XAYXH0ONo"/>
+<button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface hover:text-primary transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Ivory Georgette Kurti</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 12,000</p>
+</div>
+<!-- Product Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-highest mb-4 overflow-hidden rounded-DEFAULT relative">
+<img alt="Emerald Velvet Tunic" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A striking editorial image showcasing an emerald green velvet tunic with gold antique embroidery. The rich, jewel-toned fabric is illuminated by soft, moody lighting in a luxurious atelier environment. The composition is elegant and asymmetrical, emphasizing the depth of the velvet and the heritage craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPOsCINQJsMlEDqH70AW83uJLnK0CTDVQm3OPKWzjPvHeQSJEul9jWt0Eh60va6uS5DKua5MKYhNPcOeP3kUprUqvjAuhRW64YVgvKLMB0B4zFCFJvaf3GZz_ycAULwhr92ZY4_udI_hquNs8jI_UeetlRO3sI8j4oitjERRMYLI6Gb_pPPgasfd5tr1fl-scb7BHOY8iyNqPt4P_LVe0oSsEtPl2BYy8wyB0i3Eztd2Q2aLuZVDvVjj7RgBbwH6Ldw2JubjYYd74"/>
+<button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface hover:text-primary transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Emerald Velvet Tunic</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 16,800</p>
+</div>
+<!-- Product Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] bg-surface-container-highest mb-4 overflow-hidden rounded-DEFAULT relative">
+<img alt="Blush Pink Chanderi Set" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A soft, romantic fashion shot of a blush pink Chanderi silk co-ord set. The lightweight, sheer fabric drapes beautifully in a light-filled, airy room with minimalist decor. The soft focus and gentle lighting create a delicate, feminine mood that embodies sophisticated contemporary Indian wear." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHIkns6lmPg1jWiaSvpisyOYnS7USoVhkHXypLJTTyMlEJSZUyl2DHxulx2jKp0PtWrZ9uNdOJ9GIJVsfdA0yX8IL4dESkxlvUcN1iEE6IBzRe_4KlWR3ritvKp81_6q9D--P6jF5WpzrkbadCQSKnKvAUzcWZxO2mK-QJb9WRHn1HjGz3T-IYkk4Tuwy2Gan_sBsBarbqzfnyu77K79-uW8Kjxzx65P12BWuQfeeJ7vDdvkpKyLa2oINhrkJ4PkfWZIuPvjRxPac"/>
+<button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface hover:text-primary transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Blush Pink Chanderi Set</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 9,500</p>
+</div>
+<!-- Product Card 4 -->
+<div class="group cursor-pointer hidden lg:block">
+<div class="aspect-[4/5] bg-surface-container-highest mb-4 overflow-hidden rounded-DEFAULT relative">
+<img alt="Midnight Blue Silk Kurta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end catalog image of a midnight blue silk kurta featuring subtle silver threadwork. The garment is displayed on a mannequin in a minimalist showroom with pristine ivory walls. The crisp lighting emphasizes the sharp tailoring and the luxurious sheen of the silk, projecting a refined, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATUiCrNe-seRNYM2qy02cQo3-FXWhOnFBh9gTw4HRCBItmZUeItJrk-FXX9poFAgFhBor4t2JBjzWSyl4CgqZH4VOQfeAOlTamPiu7R2JUtiUwf5PRvvG4Nkp0GaS1D-iEID53JepHFn-lDeoym0T93IfmXEau6SzKZi2s-1IQUFYfErl5znvUgT9nDgoxA8grmIIClmOT7hhe6IhY1EheE4a-CtXHL9bjuRGEwO5UM4-bDxNBVHtMuq5CPMjyE5_YDI0jy_UGQ6U"/>
+<button class="absolute top-4 right-4 w-8 h-8 flex items-center justify-center bg-surface-container-lowest/80 backdrop-blur-sm rounded-full text-on-surface hover:text-primary transition-colors opacity-0 group-hover:opacity-100 duration-300">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<h3 class="font-body-lg text-body-lg text-on-surface mb-1 group-hover:text-primary transition-colors">Midnight Blue Silk Kurta</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 11,200</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Semantic Shell) -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full rounded-none grid grid-cols-1 md:grid-cols-4 gap-gutter px-edge-margin py-section-gap max-w-container-max mx-auto flat no shadows text-primary dark:text-primary-fixed font-body-md text-body-md">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-6 block">KUSUM HOUSE</span>
+<p class="text-on-surface-variant dark:text-outline-variant mb-6 opacity-80">Crafting Contemporary Heritage.</p>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-uppercase text-label-uppercase mb-4 text-primary font-semibold">Shop</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Sarees</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Kurtis</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Lehengas</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-uppercase text-label-uppercase mb-4 text-primary font-semibold">House</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div class="md:col-span-1">
+<h4 class="font-label-uppercase text-label-uppercase mb-4 text-primary font-semibold">Help</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 mt-12 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center text-sm opacity-80">
+<p>© 2024 KUSUM HOUSE. All rights reserved.</p>
+</div>
+</footer>
+</body></html>

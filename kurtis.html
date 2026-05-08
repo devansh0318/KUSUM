@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KUSUM HOUSE - Kurtis</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+          font-family: 'Material Symbols Outlined';
+          font-weight: normal;
+          font-style: normal;
+          font-size: 24px;
+          line-height: 1;
+          letter-spacing: normal;
+          text-transform: none;
+          display: inline-block;
+          white-space: nowrap;
+          word-wrap: normal;
+          direction: ltr;
+          -webkit-font-feature-settings: 'liga';
+          -webkit-font-smoothing: antialiased;
+        }
+        .group:hover .size-selector {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .size-selector {
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#584140",
+                      "tertiary-container": "#cba72f",
+                      "primary-fixed": "#ffdad7",
+                      "background": "#fff8f7",
+                      "inverse-surface": "#3b2d2c",
+                      "tertiary-fixed": "#ffe088",
+                      "outline-variant": "#dfbfbd",
+                      "surface-tint": "#aa3434",
+                      "on-tertiary-container": "#4e3d00",
+                      "secondary": "#5e5f5c",
+                      "on-surface": "#251918",
+                      "surface-container-highest": "#f4dddb",
+                      "primary-fixed-dim": "#ffb3ae",
+                      "surface-bright": "#fff8f7",
+                      "on-tertiary-fixed": "#241a00",
+                      "primary-container": "#7a0e16",
+                      "secondary-fixed": "#e3e2df",
+                      "inverse-on-surface": "#ffedeb",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#891b1f",
+                      "on-error": "#ffffff",
+                      "outline": "#8b716f",
+                      "inverse-primary": "#ffb3ae",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#464744",
+                      "secondary-fixed-dim": "#c7c7c3",
+                      "on-secondary-container": "#626360",
+                      "on-primary-container": "#ff817c",
+                      "on-background": "#251918",
+                      "surface-container-high": "#fae3e1",
+                      "primary": "#550008",
+                      "surface-variant": "#f4dddb",
+                      "tertiary": "#735c00",
+                      "surface-dim": "#ecd5d3",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "surface-container-low": "#fff0ef",
+                      "surface": "#fff8f7",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-container": "#e0e0dc",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410005",
+                      "surface-container": "#ffe9e7",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "unit-base": "8px",
+                      "container-max": "1440px",
+                      "edge-margin": "48px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "label-uppercase": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-uppercase": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased min-h-screen flex flex-col pt-20">
+<!-- TopNavBar -->
+<nav class="bg-background/85 dark:bg-background/85 backdrop-blur-xl text-primary dark:text-primary-fixed-dim font-label-uppercase text-label-uppercase fixed top-0 w-full z-50 bg-transparent shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-edge-margin h-20 max-w-container-max mx-auto">
+<a class="font-display-xl text-display-xl text-primary dark:text-primary-fixed tracking-tighter shrink-0" href="index.html">
+KUSUM HOUSE
+</a>
+<ul class="hidden md:flex items-center gap-8">
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Sarees</a></li>
+<li><a class="text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="#">Kurtis</a></li>
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Co-ord Sets</a></li>
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Lehengas</a></li>
+<li><a class="text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Festive</a></li>
+</ul>
+<div class="flex items-center gap-4 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined hover:text-tertiary transition-all duration-300 cursor-pointer scale-95 active:scale-90">favorite</span>
+<span class="material-symbols-outlined hover:text-tertiary transition-all duration-300 cursor-pointer scale-95 active:scale-90">shopping_bag</span>
+<span class="material-symbols-outlined hover:text-tertiary transition-all duration-300 cursor-pointer scale-95 active:scale-90 hidden md:block">person</span>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow max-w-container-max mx-auto w-full px-edge-margin pb-section-gap">
+<!-- Header Section -->
+<header class="py-16 md:py-24 text-center">
+<h1 class="font-display-xl text-display-xl text-primary mb-4">The Kurti Edit</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Discover our curated collection of contemporary kurtis, blending heritage craftsmanship with modern silhouettes for the everyday and beyond.</p>
+</header>
+<!-- Filters & Sort -->
+<div class="flex flex-col md:flex-row justify-between items-center py-6 border-y border-outline-variant/30 mb-12">
+<div class="flex gap-8 overflow-x-auto w-full md:w-auto pb-4 md:pb-0 hide-scrollbar">
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant group-hover:text-primary transition-colors">Length</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant group-hover:text-primary transition-colors">Sleeve</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant group-hover:text-primary transition-colors">Neckline</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+<div class="flex items-center gap-2 cursor-pointer group">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant group-hover:text-primary transition-colors">Color</span>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant group-hover:text-primary transition-colors">expand_more</span>
+</div>
+</div>
+<div class="flex items-center gap-4 mt-4 md:mt-0">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Sort by</span>
+<select class="bg-transparent border-none font-label-uppercase text-label-uppercase text-primary focus:ring-0 cursor-pointer pr-8">
+<option>New Arrivals</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<!-- Everyday Wear Segment -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">Everyday Essentials</h2>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-tertiary transition-colors underline underline-offset-4" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)]">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Maroon cotton kurti with delicate embroidery" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A medium shot of a modern Indian woman wearing a deep maroon cotton kurti with delicate gold embroidery along the neckline. The setting is a bright, airy, minimalist studio with soft natural light highlighting the fabric texture. The aesthetic is contemporary heritage fashion, luxurious and elegant." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOPfou5Snum3AiHqbNnqUuxojFZwnpdHNk_I74KLp7tO__v9YVWFIZOsAF9e19FR5kcg4Q0i-9b4j8c0J4FbGtfrNQ52e2KlyvZxCE70-v5c8oODS_hGTNgCWZsmAfIGvf5UnWOhr0J_IC9tctck4Kfz4Ci5VlVDSNWoMvHhFzgMlMlNKhwNbb7Z5IU_-71Cd6bdmIMSCrP8f2kUWPd4TF3DXwh6cFHKEfk1tuiSTwyE4zBW5VzU2s-Nc5eHIsZ4RViQlnxlxWkBE"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<!-- Size Selector Overlay -->
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XS</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors bg-primary text-on-primary border-primary">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XL</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Amara Cotton Kurti</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star_half</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant ml-1">(42)</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)]">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Ivory linen kurti with subtle pintucks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist fashion editorial shot featuring an ivory linen kurti with subtle pintuck details. The model stands against a warm beige background with soft, diffused lighting creating a premium, clean look. The overall mood is soft, breathable, and modern heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHJne_C1naw5ivGjKnJ0pB3abMY7yLhA_JKF69Eb32k6wVZL-5tIS1TG2lzj3o67DzzobCkjtI59StdAeCewQp72hP0ip7X4FprEnSXZ5H6_JDj9cEBvNEuk70_PD1dTNM9nK5ehwz3eOC5jaoIpY4n90CJMMsW2oe907K5LtpXDP66iK-mReXOmUAy3Hw_k25yTpK3LriCro-6OvMCfZIK9l1Q4RMw4jDeYJjj4eHFNZ4OU2NjcCGzqwzbpHqAEXIN6Dndj9X3l0"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<!-- Size Selector Overlay -->
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XL</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Nia Linen Tunic</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant ml-1">(18)</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)]">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Mustard yellow printed kurti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A fashion photography shot of a mustard yellow kurti with block print patterns. The model is elegantly posed in a well-lit, contemporary setting with soft shadows. The aesthetic is vibrant yet sophisticated, highlighting the rich cultural heritage and modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8KAUeWsUVj6Kqc_XYKSXYbPoXJNlYanolXaQ7aE5CzcmeXR9Ct2FkM2fC29GYjAkW1BEd6EwXk_R4ofXPIgseGV7YChT80R-ohoMu_xmrWob9lsR1MtPxwEqaKwQmT2Jnt7SIk9o3QXO2QK5XGu5kF58mv7dbVVPdqnAEH7obMgsE-4FiAkBdIMkoQLGVqG2N8lufaKyCAUwcbpF7gaAFo37bbn6y8dFnHB0Mjwo3airDsmx0-ROPVu0rU6Wz36dFPYJGD79pSEQ"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<!-- Size Selector Overlay -->
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors bg-primary text-on-primary border-primary">XS</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors line-through text-outline-variant" disabled="">L</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Tara Block Print Kurti</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star_outline</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant ml-1">(5)</span>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)] hidden lg:block">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Charcoal grey A-line kurti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A chic, editorial portrait of a woman wearing a charcoal grey A-line kurti with minimal detailing. The lighting is dramatic yet soft, casting elegant shadows that emphasize the drape of the fabric. The background is a stark, clean white to make the dark silhouette pop, creating a premium, modern aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJLGWRSxJiId12oChsvrbNEqvjPN80AE3scy4udyRTTVHHVTx3A83BzQ_TizSHMrJnu2Q2DsfZ-iNYvxi-OFDDxCeiDOtIvHOQSkCr-hEvPgmCsTzLrcX0jkETa9uuJxG7h64mkGwJjOwmKo25WlmQupGtOKNKgDkFJVVeelDTtOBskcFXtXS2aPMQP5KIInNO2jgOLsLi9_4gMF2Z9LKjuCKt5F-A7KHk2ABvXbVChBxJWEKhv3G14WKp8hgKzBFyuTn74uyTu7s"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<!-- Size Selector Overlay -->
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XL</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XXL</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Raya A-Line Kurti</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-uppercase text-[10px] text-on-surface-variant ml-1">(27)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Festive Wear Segment -->
+<section class="mb-section-gap">
+<div class="flex justify-between items-end mb-8">
+<h2 class="font-headline-md text-headline-md text-primary">Festive Elegance</h2>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-tertiary transition-colors underline underline-offset-4" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Highlight Editorial Card -->
+<div class="md:col-span-5 lg:col-span-4 relative bg-surface-container-high rounded-lg overflow-hidden group">
+<img alt="Elegant silk kurti with zari work" class="w-full h-[600px] object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A stunning, high-fashion editorial portrait of a woman in an emerald green silk kurti adorned with intricate gold zari work. The lighting is moody and cinematic, highlighting the sheen of the silk and the sparkle of the embroidery. The background is a deep, blurred maroon to emphasize the luxury and festive nature of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsdBcVhCAnvairX4OvlA1nZS7T7evN_RCHlJKxTf_CyLLwOWcQUbfk3y1k6Z7JK1gGTO7SCsTH2MuZ3YfYrbUXfjcmr3TN9lzHHBuCmRuIyBdEt3cxtPPPFPTNvsUqGqg6Vj1oAs840VshDFyI56iqMeadj-vYz7CLtOdD4M7zLuK6td6FOIFEdED4fCPNoyV4RAFc-isltD6P0IpoMH4Oa4yLvI2-LafBF9ngUglGw_Mc1eDyx6KVI83nk-6_Yu5Owas4LtICa-0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<span class="font-label-uppercase text-label-uppercase text-tertiary-fixed mb-2 block">Festive Collection</span>
+<h3 class="font-display-xl text-[40px] text-on-primary mb-4">Zari &amp; Silk</h3>
+<button class="font-label-uppercase text-label-uppercase text-on-primary border-b border-on-primary pb-1 hover:text-tertiary-fixed hover:border-tertiary-fixed transition-colors">Shop The Look</button>
+</div>
+</div>
+<!-- Product Grid 3-col -->
+<div class="md:col-span-7 lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Festive Product 1 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)]">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Deep maroon Anarkali kurti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A full-length fashion shot of a deep maroon velvet Anarkali kurti featuring heavy gold embroidery on the bodice. The model is twirling slightly to show the flare of the garment. The background is a soft, warm ivory to contrast with the rich jewel tones of the outfit. Premium, elegant lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSC5liWTHe_4XBcgbkiuhlZXxbw0XDjiYVLKwQWURupRGneL9Eqdsra6M5KWdcHKzgk9R9PB5bMEGoHwYv_v0nsKd_1CD_pWQx3EjLEF5JeeuTQQgiudo5h4bAEn_vv7h2zt0wNqRDQ7JMUtcHQzFz0c3z5RgSWUR0YLX7uUQuxnlGijLSyyBcP00pP7zNI3XVck6gxPGwLYC3BG6bhQWCuAbfa6G6L5fiUQuJ_d3Dr7W4x689gQEjGCKpOyx5ngu5sSNXHtVpiDU"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors bg-primary text-on-primary border-primary">L</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Maya Velvet Anarkali</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Festive Product 2 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)]">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Ivory georgette kurti with sequence" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A delicate portrait of a woman in an ivory georgette kurti with subtle pearl and sequin embroidery. The lighting is very soft, airy, and high-key, creating a dreamy, ethereal look. The aesthetic is contemporary luxury, focusing on the sheer, flowing fabric against a minimalist white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDriqmBvq5-YWvKqRUcSs94bwqynbw-1JqJF-Rn2ZHfNDMiH1K6h1Cz7Wmtc0OUekt14IHoaD8aY98My9EjZIoHVSKCjBUfkKayCZ8Sm3SvgEb4iA6fBreQSBseR6WFymDiYMLHY5DCRl6HYu6L5h1VxtotG1-PALFvtaX-DykLxS0en7lT-PAsRG5P7fmYyTfK3_9L49-IoWmgWYyYR-EAPqOWnUDK-afcnGDnSuqDiWeCcY57dauPR3keboh8I_zmvVVEp38OFTk"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1; color: var(--color-primary);">favorite</span>
+</button>
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XS</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">S</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Chandni Georgette Kurti</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]">star_half</span>
+</div>
+</div>
+</div>
+<!-- Festive Product 3 -->
+<div class="group relative bg-surface-container-lowest rounded-lg overflow-hidden shadow-[0_4px_24px_rgba(122,14,22,0.04)] hidden lg:block">
+<div class="relative aspect-[4/5] bg-surface-variant overflow-hidden">
+<img alt="Mustard Chanderi Silk Kurti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A fashion shot focusing on the intricate details of a mustard yellow Chanderi silk kurti with delicate gold motifs. The lighting is warm and directional, emphasizing the texture of the silk. The aesthetic is rich, traditional yet styled in a contemporary, editorial way." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9q7gofASB0AlQO1mLzGp4MACWv_Ap0bv3SS_oVTIoq-JkSIcN1fQra2uvGIelyBqhjFgQtcqWhE4E8o_eShEk6-jtrxOVma7FwDI5jtiCZVfB2h9BsX7NLqBggAGHjUxT3XKNJw6KcFZ-m21U-8tBEFVhN8q3nRHTaY5Cn63lLo78PBJRawePm9L2UghIQFRdCPF_iC0LLOKXLfknWyMpGonT-E8qeOA4hP08FvHhBaFlYN2V2nTZIMA5FNQ4pS29RwijwDGfb2Q"/>
+<button class="absolute top-4 right-4 p-2 rounded-full bg-surface-container-lowest/80 backdrop-blur-sm text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[20px]">favorite</span>
+</button>
+<div class="size-selector absolute bottom-0 left-0 w-full bg-surface-container-lowest/95 backdrop-blur-md p-4 border-t border-outline-variant/20">
+<p class="font-label-uppercase text-label-uppercase text-center mb-2 text-on-surface-variant">Select Size</p>
+<div class="flex justify-center gap-2">
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">M</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">L</button>
+<button class="w-8 h-8 rounded border border-outline-variant text-label-uppercase hover:border-primary hover:text-primary transition-colors">XL</button>
+</div>
+</div>
+</div>
+<div class="p-4 text-center">
+<h3 class="font-headline-md text-[18px] text-primary mb-1">Roshni Chanderi Kurti</h3>
+
+<div class="flex justify-center items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Load More CTA -->
+<div class="text-center pb-8">
+<button class="bg-primary text-on-primary font-label-uppercase text-label-uppercase py-4 px-12 rounded-lg hover:bg-primary-container transition-colors duration-300 shadow-sm">Load More Styles</button>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full rounded-none flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-edge-margin py-section-gap max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-6 block">KUSUM HOUSE</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant mb-4 opacity-80">Crafting Contemporary Heritage.</p>
+<div class="flex gap-4 opacity-80 hover:opacity-100 transition-opacity text-primary">
+<span class="material-symbols-outlined cursor-pointer hover:text-tertiary transition-colors">public</span>
+</div>
+</div>
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-4">Shop</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Sarees</a></li>
+<li><a class="text-primary font-semibold" href="#">Kurtis</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Lehengas</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-4">About</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">About Us</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Sustainability</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-4">Customer Care</h4>
+<ul class="space-y-3 font-body-md text-body-md">
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Contact</a></li>
+<li><a class="text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Shipping &amp; Returns</a></li>
+</ul>
+</div>
+</div>
+<div class="border-t border-outline-variant/20 px-edge-margin py-6 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant opacity-80 text-sm">© 2024 KUSUM HOUSE. All rights reserved. Crafting Contemporary Heritage.</p>
+</div>
+</footer>
+<script src="nav.js"></script></body></html>

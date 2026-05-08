@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Co-ord Sets - KUSUM HOUSE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#584140",
+                      "tertiary-container": "#cba72f",
+                      "primary-fixed": "#ffdad7",
+                      "background": "#fff8f7",
+                      "inverse-surface": "#3b2d2c",
+                      "tertiary-fixed": "#ffe088",
+                      "outline-variant": "#dfbfbd",
+                      "surface-tint": "#aa3434",
+                      "on-tertiary-container": "#4e3d00",
+                      "secondary": "#5e5f5c",
+                      "on-surface": "#251918",
+                      "surface-container-highest": "#f4dddb",
+                      "primary-fixed-dim": "#ffb3ae",
+                      "surface-bright": "#fff8f7",
+                      "on-tertiary-fixed": "#241a00",
+                      "primary-container": "#7a0e16",
+                      "secondary-fixed": "#e3e2df",
+                      "inverse-on-surface": "#ffedeb",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#891b1f",
+                      "on-error": "#ffffff",
+                      "outline": "#8b716f",
+                      "inverse-primary": "#ffb3ae",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#464744",
+                      "secondary-fixed-dim": "#c7c7c3",
+                      "on-secondary-container": "#626360",
+                      "on-primary-container": "#ff817c",
+                      "on-background": "#251918",
+                      "surface-container-high": "#fae3e1",
+                      "primary": "#550008",
+                      "surface-variant": "#f4dddb",
+                      "tertiary": "#735c00",
+                      "surface-dim": "#ecd5d3",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "surface-container-low": "#fff0ef",
+                      "surface": "#fff8f7",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-container": "#e0e0dc",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410005",
+                      "surface-container": "#ffe9e7",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "unit-base": "8px",
+                      "container-max": "1440px",
+                      "edge-margin": "48px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "label-uppercase": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-uppercase": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased pt-20">
+<!-- TopNavBar Component -->
+<nav class="bg-background/85 dark:bg-background/85 backdrop-blur-xl shadow-sm dark:shadow-none fixed top-0 w-full z-50 bg-transparent">
+<div class="flex justify-between items-center px-edge-margin h-20 max-w-container-max mx-auto">
+<!-- Brand Logo -->
+<a class="font-display-xl text-display-xl text-primary dark:text-primary-fixed tracking-tighter" href="#">
+                KUSUM HOUSE
+            </a>
+<!-- Navigation Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Sarees</a>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Kurtis</a>
+<a class="font-label-uppercase text-label-uppercase text-primary dark:text-primary-fixed border-b border-primary dark:border-primary-fixed pb-1" href="#">Co-ord Sets</a>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Lehengas</a>
+<a class="font-label-uppercase text-label-uppercase text-on-surface-variant dark:text-on-secondary-fixed-variant hover:text-primary transition-colors duration-300" href="#">Festive</a>
+</div>
+<!-- Trailing Icon Actions -->
+<div class="flex gap-4 items-center">
+<button class="text-primary dark:text-primary-fixed-dim hover:text-tertiary transition-all duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:text-tertiary transition-all duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+<button class="text-primary dark:text-primary-fixed-dim hover:text-tertiary transition-all duration-300 scale-95 active:scale-90 transition-transform">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="max-w-container-max mx-auto px-edge-margin py-section-gap">
+<!-- Hero Section -->
+<header class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center mb-section-gap">
+<div class="md:col-span-5 z-10">
+<h1 class="font-display-xl text-display-xl text-primary mb-6">Contemporary<br/>Fluidity</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-md">Discover our curated collection of Co-ord Sets. Effortless styling meets traditional craftsmanship for the modern cosmopolitan woman.</p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container font-label-uppercase text-label-uppercase px-8 py-4 rounded-DEFAULT hover:bg-primary hover:text-on-primary transition-all duration-300 shadow-[0_4px_14px_0_rgba(122,14,22,0.15)] hover:shadow-[0_6px_20px_rgba(122,14,22,0.23)] hover:-translate-y-0.5">Explore the Edit</button>
+</div>
+</div>
+<div class="md:col-span-7 relative h-[600px] w-full">
+<img alt="Hero Image" class="w-full h-full object-cover object-top rounded-lg shadow-sm" data-alt="A fashion editorial shot of a woman wearing a luxurious, flowing maroon and ivory two-piece coordinate set. She is standing gracefully in an airy, minimalist studio with warm, diffused sunlight casting soft shadows. The atmosphere is highly premium, reflecting a blend of contemporary fashion and traditional Indian heritage craftsmanship. The color palette features deep reds, soft beiges, and crisp whites." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZB97kao-39_GOvO-UCHF8pomMCYRUNqCgD2DB9_hBQAf28RtWRTKbXjYs8HWc3w0jJIlSNOwH24lw0AqPQXhsxN-T4HpvfPx9o6HOwMDfL6z7rm8ukjbD92v6_YY9pdOfI-lPlFIwJ22rZuQP1iJecq2NT8rxLgSwvuTYqbSaJvNqyXS2EPCpVbpMPda3UdShwq_YImh5SsM0hwsTFrQbmGF62IPXLTDyOX_DTG7m6vx57j3jO8JiwYg1GZmO1f8d1yr4Urh2YRs"/>
+<div class="absolute bottom-8 right-8 bg-surface/90 backdrop-blur-sm p-4 rounded-lg shadow-sm">
+<p class="font-label-uppercase text-label-uppercase text-on-surface mb-1">Featured Look</p>
+<p class="font-body-md text-body-md text-primary">The Crimson Flow Set</p>
+</div>
+</div>
+</header>
+<!-- Filters & Sorting -->
+<section class="flex flex-col md:flex-row justify-between items-center border-b border-surface-variant pb-6 mb-12">
+<div class="flex gap-4 mb-4 md:mb-0 overflow-x-auto w-full md:w-auto pb-2 md:pb-0">
+<button class="font-label-uppercase text-label-uppercase text-primary border-b-2 border-primary pb-1 whitespace-nowrap">All Sets</button>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-primary transition-colors pb-1 whitespace-nowrap">Modern Ethnic</button>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-primary transition-colors pb-1 whitespace-nowrap">Fusion Flow</button>
+<button class="font-label-uppercase text-label-uppercase text-on-surface-variant hover:text-primary transition-colors pb-1 whitespace-nowrap">Evening Elegance</button>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-uppercase text-label-uppercase text-on-surface-variant">Sort by</span>
+<select class="bg-transparent border-none font-body-md text-body-md text-primary focus:ring-0 cursor-pointer">
+<option>New Arrivals</option>
+<option>Price: High to Low</option>
+<option>Price: Low to High</option>
+</select>
+<span class="material-symbols-outlined text-primary text-sm" data-icon="expand_more">expand_more</span>
+</div>
+</section>
+<!-- Editorial Grid -->
+<section class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap auto-rows-[400px]">
+<!-- Large Focus Card (Spans 8 columns) -->
+<article class="md:col-span-8 row-span-2 group relative overflow-hidden rounded-lg bg-surface-container-highest cursor-pointer">
+<img alt="Product Image" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" data-alt="A striking full-body shot of a model wearing an elegant, contemporary co-ord set in rich maroon and gold tones. She is posed dynamically against a stark, minimalist ivory background. The lighting is editorial and soft, highlighting the subtle textures of the premium fabric and the intricate gold detailing. The overall aesthetic is sophisticated, feminine, and subtly luxurious, matching the brand's 'Contemporary Heritage' style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_9BtQy_MI37x_1PoSrYjViwfXmucA2aLN3hMxjpc_Y1RZyL--QcGMCiu3TUaNlVK-F3zAqATSFe0ttjAUmBZIKrQBx8eAmYUlPFFdoG7q_1YuxGBkLHDeuOQ7xWeL1UMsbtJB8cfgdyl_y5uZxo-7lI2oUnrIoyXeQ57QFlL65MPbP7Z8Ec2ZzgOBajAwZvwcyakVu6OKjdJ7ygObQPrVLzl6ttQlWL96RXrU9OzmWBzrAcKILHugoPf8pK37IkZXi56iIKtgs-E"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/60 via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-8 left-8 right-8 flex justify-between items-end">
+<div>
+<span class="inline-block bg-surface px-3 py-1 font-label-uppercase text-label-uppercase text-primary rounded-sm mb-3">Fusion Flow</span>
+<h2 class="font-headline-md text-headline-md text-on-primary mb-2">The Ivory &amp; Gold Tunic Set</h2>
+<p class="font-body-md text-body-md text-on-primary/90">₹ 12,500</p>
+</div>
+<button class="bg-surface text-primary p-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</article>
+<!-- Standard Card (Spans 4 columns) -->
+<article class="md:col-span-4 row-span-1 group relative overflow-hidden rounded-lg bg-surface-container-highest cursor-pointer">
+<img alt="Product Image" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A close-up fashion shot focusing on the delicate embroidery of a premium co-ord set top. The fabric is a soft beige with intricate maroon threading. The lighting is warm and directional, emphasizing the tactile quality of the textile. The composition is asymmetrical, drawing attention to the craftsmanship in a minimalist, high-end editorial context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwk3bdD2cBD_K_lF6mBPnCwUpy5L9BQHarAuZPznOMdXK5Avx_ZIdctWMZVVCvI7W4eGlPqAqoAmMuVd6ua5CzAM1mPfIolSgpSWTe0ffSXOm65SOWB4ZpEtmQtx04GQpDN6kfWBxV1GkWPe8uY1TqjonaOC32GehT78XFtBAcvyMHHzOBhzk8pMvXOICxj8HVRxkPYil_hc_IwvPhgYkh31VdrsW-Cff51hs1s_g8Skzbv7fBM9X-j75E4IJQin2M6etHp-qYTgE"/>
+<div class="absolute top-4 right-4 z-10">
+<button class="text-surface hover:text-primary transition-colors duration-300 drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-surface translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Blush Print Set</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 8,900</p>
+</div>
+</article>
+<!-- Standard Card (Spans 4 columns) -->
+<article class="md:col-span-4 row-span-1 group relative overflow-hidden rounded-lg bg-surface-container-highest cursor-pointer">
+<img alt="Product Image" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A lifestyle fashion image of a young woman walking confidently in a modern urban setting, wearing a sleek, contemporary maroon co-ord suit. The lighting is bright daylight, creating sharp, clean lines. The look is powerful yet feminine, blending traditional color palettes with a modern, cosmopolitan silhouette. The overall tone is aspirational and stylish." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZdIwqCfMqGV47S5stJDq54q1hN_szW8NpPu5eOh8qgnAitF1u28EYYeQhmeUCpifAhb3icIPAG-LpbiJcdnbmuY4L-grQk70KwMi9BwxJKwnlo84vjsayaoiju2mdIxzzOY8iAeLZwUy-c4oB26zTnCYnT332NzjxlNUOqdCwUyfPFieeQ86MOtrOT7bGT-gyFOoYaEmZI9JgpXVyx6BegWcHGwtrlmVLXnH50u2pd7DP0ge-9fxcjvVDb-LDiWcEz-2Zw1D8d9M"/>
+<div class="absolute top-4 right-4 z-10">
+<button class="text-surface hover:text-primary transition-colors duration-300 drop-shadow-md">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+</button>
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<div class="absolute bottom-0 left-0 w-full p-4 bg-surface translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+<h3 class="font-headline-md text-body-lg text-primary mb-1">Maroon Power Suit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">₹ 14,200</p>
+</div>
+</article>
+<!-- Medium Card (Spans 6 columns) -->
+<article class="md:col-span-6 row-span-1 group relative overflow-hidden rounded-lg bg-surface-container-highest cursor-pointer">
+<img alt="Product Image" class="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" data-alt="A serene editorial photograph of a model in a light beige and gold flowing co-ord set, seated on a minimalist stone bench against a plain backdrop. The lighting is soft and ethereal, creating a sense of luxury and calm. The focus is on the drape and movement of the fabric, highlighting the elegant, relaxed fit typical of the 'Modern Ethnic' aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABYhIBrik_zt9P1UvoKnu4A_MZlFmRy5pWV8iUu1OUCcScxhnMSD_gjysCooJwqj0MA6DWximGQPo_HxKGyFGjwnT8diL2RNnivtmfpfvJXEjK7FTj37EtlE6l6uk3pIPDo4hUCMGy3N5P3zLAJqphKiQui1Vui7FJ22CttSi2vneC74RLsNDqsmUgsdZn_L3iYWuEzsPLAZAMK4aqc1LJD1BvjnU1zg3WYJFpJM9FTgZpuV3lDB7KWsYz-AYYJWwZ6Re8gysCIJU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 to-transparent"></div>
+<div class="absolute top-6 left-6">
+<span class="inline-block bg-surface px-2 py-1 font-label-uppercase text-label-uppercase text-primary rounded-sm shadow-sm">Modern Ethnic</span>
+</div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline-md text-headline-md text-on-primary mb-1 drop-shadow-sm">The Sand Dune Set</h3>
+<p class="font-body-md text-body-md text-on-primary/90 drop-shadow-sm">₹ 11,000</p>
+</div>
+<div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface text-primary p-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</article>
+<!-- Medium Card (Spans 6 columns) -->
+<article class="md:col-span-6 row-span-1 group relative overflow-hidden rounded-lg bg-surface-container-highest cursor-pointer">
+<img alt="Product Image" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" data-alt="A detail-oriented shot of a luxurious deep red co-ord set top, featuring subtle, intricate geometric patterns woven into the fabric. The composition uses generous negative space to draw the eye to the garment's texture. The lighting is moody and sophisticated, reminiscent of a high-end fashion magazine lookbook." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7Sa68bZF3AJymo8hhVbsy98Nr5rVhy1_1yAjljwtXRdJ1lHvlwHE34HWvgWK-ayeKGHBrBoCkGwRWRPxMijdyT8x5UwEJ7dAfYpPgsWb1XlEB2ijLDEjeL5svpg1mIpIjPFjA7zk5Ge_q6wKMdvanALLVi6mW7AGGJGb1e1-J1IyLqv3mrdzJebJPDQ9uQLdRxEnQ7vQP4bzHPQhUQgB7_III4XXKC6VKg971K5M6JlQDHpTY9dDnwTr2srUZeoXozHqqqNCQbTc"/>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/40 to-transparent"></div>
+<div class="absolute top-6 left-6">
+<span class="inline-block bg-surface px-2 py-1 font-label-uppercase text-label-uppercase text-primary rounded-sm shadow-sm">Evening Elegance</span>
+</div>
+<div class="absolute bottom-6 left-6">
+<h3 class="font-headline-md text-headline-md text-on-primary mb-1 drop-shadow-sm">Ruby Geometric Set</h3>
+<p class="font-body-md text-body-md text-on-primary/90 drop-shadow-sm">₹ 15,800</p>
+</div>
+<div class="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<button class="bg-surface text-primary p-3 rounded-full hover:bg-primary-container hover:text-on-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</article>
+</section>
+<!-- Newsletter Banner -->
+<section class="bg-surface-container-high rounded-xl p-12 text-center mb-section-gap relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% 50%, var(--tw-colors-primary) 0%, transparent 50%);"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4 relative z-10">Join the Atelier</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto mb-8 relative z-10">Subscribe to receive early access to new collections, exclusive event invitations, and style inspiration.</p>
+<form class="flex flex-col sm:flex-row justify-center max-w-md mx-auto gap-4 relative z-10">
+<input class="bg-surface border-none border-b border-outline rounded-none px-4 py-3 font-body-md text-body-md text-on-surface focus:ring-0 focus:border-primary flex-grow" placeholder="Email Address" type="email"/>
+<button class="bg-primary text-on-primary font-label-uppercase text-label-uppercase px-6 py-3 rounded-DEFAULT hover:bg-primary-container transition-colors shadow-sm" type="submit">Subscribe</button>
+</form>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface w-full rounded-none flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-edge-margin py-section-gap max-w-container-max mx-auto">
+<!-- Brand Section -->
+<div class="col-span-1 md:col-span-1">
+<a class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-6 block" href="#">KUSUM HOUSE</a>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant mb-6 text-sm max-w-xs">
+                    Crafting Contemporary Heritage. Bringing timeless Indian craftsmanship to the modern wardrobe.
+                </p>
+<div class="flex gap-4">
+<!-- Social Icons Placeholders -->
+<a class="text-primary hover:text-tertiary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span></a>
+<a class="text-primary hover:text-tertiary transition-colors" href="#"><span class="material-symbols-outlined" data-icon="mail">mail</span></a>
+</div>
+</div>
+<!-- Links Sections -->
+<div class="col-span-1 md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-6">Shop</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Sarees</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Kurtis</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity text-primary font-semibold" href="#">Co-ord Sets</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Lehengas</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Festive</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-6">Explore</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">About Us</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Sustainability</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Journal</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-uppercase text-label-uppercase text-primary mb-6">Customer Care</h4>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Contact</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">Size Guide</a></li>
+<li><a class="hover:text-tertiary underline-offset-4 hover:underline transition-all opacity-80 hover:opacity-100 transition-opacity" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Copyright Bottom Bar -->
+<div class="border-t border-surface-variant dark:border-outline-variant/20 px-edge-margin py-6">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center font-body-md text-body-md text-sm text-on-surface-variant/70">
+<p>© 2024 KUSUM HOUSE. All rights reserved. Crafting Contemporary Heritage.</p>
+<div class="flex gap-4 mt-4 md:mt-0">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

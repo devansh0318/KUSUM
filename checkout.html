@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - Kusum House</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#584140",
+                      "tertiary-container": "#cba72f",
+                      "primary-fixed": "#ffdad7",
+                      "background": "#fff8f7",
+                      "inverse-surface": "#3b2d2c",
+                      "tertiary-fixed": "#ffe088",
+                      "outline-variant": "#dfbfbd",
+                      "surface-tint": "#aa3434",
+                      "on-tertiary-container": "#4e3d00",
+                      "secondary": "#5e5f5c",
+                      "on-surface": "#251918",
+                      "surface-container-highest": "#f4dddb",
+                      "primary-fixed-dim": "#ffb3ae",
+                      "surface-bright": "#fff8f7",
+                      "on-tertiary-fixed": "#241a00",
+                      "primary-container": "#7a0e16",
+                      "secondary-fixed": "#e3e2df",
+                      "inverse-on-surface": "#ffedeb",
+                      "on-tertiary-fixed-variant": "#574500",
+                      "surface-container-lowest": "#ffffff",
+                      "on-primary": "#ffffff",
+                      "on-primary-fixed-variant": "#891b1f",
+                      "on-error": "#ffffff",
+                      "outline": "#8b716f",
+                      "inverse-primary": "#ffb3ae",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed-variant": "#464744",
+                      "secondary-fixed-dim": "#c7c7c3",
+                      "on-secondary-container": "#626360",
+                      "on-primary-container": "#ff817c",
+                      "on-background": "#251918",
+                      "surface-container-high": "#fae3e1",
+                      "primary": "#550008",
+                      "surface-variant": "#f4dddb",
+                      "tertiary": "#735c00",
+                      "surface-dim": "#ecd5d3",
+                      "on-secondary-fixed": "#1b1c1a",
+                      "surface-container-low": "#fff0ef",
+                      "surface": "#fff8f7",
+                      "tertiary-fixed-dim": "#e9c349",
+                      "secondary-container": "#e0e0dc",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410005",
+                      "surface-container": "#ffe9e7",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "unit-base": "8px",
+                      "container-max": "1440px",
+                      "edge-margin": "48px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Montserrat"
+                      ],
+                      "label-uppercase": [
+                              "Montserrat"
+                      ],
+                      "headline-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "display-xl": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Montserrat"
+                      ],
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-uppercase": [
+                              "12px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "display-xl": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24
+        }
+      </style>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased selection:bg-primary selection:text-on-primary">
+<!-- Simplified TopNavBar for Checkout -->
+<header class="fixed top-0 w-full z-50 bg-background/85 dark:bg-background/85 backdrop-blur-xl bg-transparent shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-edge-margin h-20 max-w-container-max mx-auto">
+<a class="font-display-xl text-display-xl text-primary dark:text-primary-fixed tracking-tighter scale-95 active:scale-90 transition-transform" href="#">
+                KUSUM HOUSE
+            </a>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="lock">lock</span>
+<span class="text-label-uppercase font-label-uppercase text-primary uppercase tracking-widest">Secure Checkout</span>
+</div>
+</div>
+</header>
+<main class="pt-[120px] pb-section-gap px-edge-margin max-w-container-max mx-auto min-h-screen">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24">
+<!-- Left Column: Checkout Form -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-12">
+<!-- Contact Information -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Contact Information</h2>
+<div class="space-y-4">
+<div>
+<label class="sr-only" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" id="email" placeholder="Email Address" type="email"/>
+</div>
+<div class="flex items-center gap-2 pt-2">
+<input class="rounded-sm border-outline-variant text-primary focus:ring-primary bg-transparent w-4 h-4" id="newsletter" type="checkbox"/>
+<label class="font-body-md text-sm text-on-surface-variant cursor-pointer" for="newsletter">Email me with news and offers</label>
+</div>
+</div>
+</section>
+<!-- Shipping Address -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Shipping Address</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="md:col-span-2">
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors appearance-none">
+<option>United States</option>
+<option>United Kingdom</option>
+<option>Canada</option>
+<option>Australia</option>
+<option>India</option>
+</select>
+</div>
+<div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="First Name" type="text"/>
+</div>
+<div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Last Name" type="text"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Address" type="text"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Apartment, suite, etc. (optional)" type="text"/>
+</div>
+<div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="City" type="text"/>
+</div>
+<div>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="State / Province" type="text"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="ZIP / Postal Code" type="text"/>
+</div>
+<div class="md:col-span-2">
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Phone" type="tel"/>
+</div>
+</div>
+</section>
+<!-- Payment Details -->
+<section>
+<h2 class="font-headline-md text-headline-md text-primary mb-6">Payment</h2>
+<p class="font-body-md text-sm text-on-surface-variant mb-6">All transactions are secure and encrypted.</p>
+<div class="border border-outline-variant rounded-lg overflow-hidden">
+<!-- Credit Card Option -->
+<div class="p-4 bg-surface-container-lowest border-b border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input checked="" class="text-primary focus:ring-primary w-4 h-4 border-outline-variant bg-transparent" id="pay-cc" name="payment_method" type="radio"/>
+<label class="font-body-md text-body-md font-medium text-on-surface cursor-pointer" for="pay-cc">Credit Card</label>
+</div>
+<div class="flex gap-1">
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="credit_card">credit_card</span>
+</div>
+</div>
+<!-- Credit Card Form -->
+<div class="p-4 bg-surface-container-lowest border-b border-outline-variant space-y-4">
+<div>
+<input class="w-full bg-transparent border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary px-3 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Card number" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<input class="w-full bg-transparent border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary px-3 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Expiration date (MM / YY)" type="text"/>
+</div>
+<div>
+<input class="w-full bg-transparent border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary px-3 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Security code" type="text"/>
+</div>
+</div>
+<div>
+<input class="w-full bg-transparent border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary px-3 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Name on card" type="text"/>
+</div>
+</div>
+<!-- Alternative Payment (e.g., PayPal) -->
+<div class="p-4 bg-surface-container-lowest flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input class="text-primary focus:ring-primary w-4 h-4 border-outline-variant bg-transparent" id="pay-alt" name="payment_method" type="radio"/>
+<label class="font-body-md text-body-md font-medium text-on-surface cursor-pointer" for="pay-alt">PayPal</label>
+</div>
+</div>
+</div>
+</section>
+<!-- Actions -->
+<div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-6 border-t border-outline-variant/30">
+<a class="font-body-md text-body-md text-primary flex items-center gap-2 hover:text-tertiary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm" data-icon="chevron_left">chevron_left</span>
+                        Return to cart
+                    </a>
+<button class="w-full md:w-auto bg-primary text-on-primary font-label-uppercase text-label-uppercase tracking-widest uppercase px-12 py-4 rounded-lg hover:bg-primary-container transition-all duration-300 shadow-sm hover:shadow-md flex items-center justify-center gap-2">
+                        Complete Purchase
+                        <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Right Column: Order Summary (Sticky) -->
+<div class="lg:col-span-5 xl:col-span-4 relative">
+<div class="sticky top-[120px] bg-surface-container-highest/30 p-8 rounded-xl border border-outline-variant/20 shadow-[0_4px_24px_rgba(122,14,22,0.02)]">
+<h3 class="font-headline-md text-2xl text-primary mb-6 border-b border-outline-variant/30 pb-4">Order Summary</h3>
+<!-- Products -->
+<div class="space-y-6 mb-8">
+<!-- Product Item 1 -->
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 shrink-0 bg-surface-container-lowest rounded overflow-hidden relative">
+<img alt="Crimson Silk Saree with intricate gold zari work, draped elegantly on a mannequin, set against a dark moody background." class="w-full h-full object-cover" data-alt="A luxurious crimson silk saree featuring intricate gold zari embroidery along the border. The fabric has a rich, glossy sheen, catching the soft, warm lighting in a high-end boutique setting. The background is a soft, blurred deep maroon, enhancing the contemporary heritage aesthetic of the garment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgJ6mRX1rg1-2OlOuSCkAHfsN2atbyshyIEAiDMqroshq6D9racPmaUPHC4Hrc5VFvZG6IZ89YnkyjqouuDx8cgkaYvJoMdoewwc1RnCPsqRM-ecc7nHRHVWjdob0hO-31NjRRjVlV86ZuGjZF-WMpuNESgdg1lipN4NM93Ds1W4x-Za-5-ubb7ROd5GrxbMwHFnnpNim4XIbhtFztKQxfVHcHcW1rzmKEbWiH6j1DRtqV-J-touSQ3Q43ZEWW3hDac-r4dwuawB4"/>
+<div class="absolute -top-2 -right-2 bg-on-surface-variant text-on-primary w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold">1</div>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="font-body-md text-body-md text-on-surface font-medium leading-tight mb-1">Crimson Silk Zari Saree</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-2">Color: Deep Maroon</p>
+</div>
+</div>
+<!-- Product Item 2 -->
+<div class="flex items-start gap-4">
+<div class="w-20 h-24 shrink-0 bg-surface-container-lowest rounded overflow-hidden relative">
+<img alt="Ivory Embroidered Kurti set with subtle floral motifs, modern cut, displayed flat on a textured beige surface." class="w-full h-full object-cover" data-alt="An elegant ivory embroidered kurti set laid flat on a finely textured beige surface. The garment features subtle, delicate floral motifs stitched in pale gold thread. Soft, diffused lighting creates gentle shadows, highlighting the premium fabric texture and minimalist contemporary fashion style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAA6b8qSeJ8F3qT1HT7kkRx5u4OminzYVVQp_T7Sj7P_h0pkdQR5QbGlL2fuA3bnEZ5CB1985KzLjimhzYyzAUvVhpEhIxPxvQQ13tr9u2ywP35l1cNixy8p83MVD0g1DSlrRDrVFM3h7UEqoFKZ5nmMuHB8EUtLaSR-rz1N8tffBlKJhmr6wqsWdfzJofMfCawiQp0h-wSLSf66W5c73n7o2FZF40Y7jpZ4Qpjdkoxh8hvVXuqbqXbIO_L-m9IxhcjHTynhpNY4SA"/>
+<div class="absolute -top-2 -right-2 bg-on-surface-variant text-on-primary w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold">1</div>
+</div>
+<div class="flex-1 pt-1">
+<h4 class="font-body-md text-body-md text-on-surface font-medium leading-tight mb-1">Ivory Floral Kurti Set</h4>
+<p class="font-body-md text-sm text-on-surface-variant mb-2">Size: Medium</p>
+</div>
+</div>
+</div>
+<!-- Discount Code -->
+<div class="flex gap-2 mb-8 border-b border-outline-variant/30 pb-8">
+<input class="flex-1 bg-surface-container-lowest border border-outline-variant rounded focus:border-primary focus:ring-1 focus:ring-primary px-4 py-3 font-body-md text-body-md text-on-surface transition-colors placeholder:text-on-surface-variant/50" placeholder="Gift card or discount code" type="text"/>
+<button class="bg-surface-container-highest text-on-surface hover:bg-outline-variant/50 border border-outline-variant px-6 py-3 rounded font-label-uppercase text-label-uppercase uppercase transition-colors">Apply</button>
+</div>
+<!-- Totals -->
+<div class="space-y-3 font-body-md text-body-md mb-6 border-b border-outline-variant/30 pb-6">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Shipping</span>
+<span class="text-on-surface font-medium">Calculated at next step</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Estimated taxes</span>
+</div>
+</div>
+<!-- Grand Total -->
+<div class="flex justify-between items-end mb-8">
+<span class="font-body-md text-body-lg text-on-surface">Total</span>
+<div class="text-right">
+<span class="font-body-md text-sm text-on-surface-variant mr-2">USD</span>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex items-center justify-center gap-4 text-on-surface-variant/60">
+<span class="material-symbols-outlined text-2xl" data-icon="shield_lock">shield_lock</span>
+<span class="material-symbols-outlined text-2xl" data-icon="verified_user">verified_user</span>
+<span class="material-symbols-outlined text-2xl" data-icon="local_shipping">local_shipping</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer Component from JSON -->
+<footer class="w-full rounded-none bg-surface-container-highest dark:bg-inverse-surface grid grid-cols-1 md:grid-cols-4 gap-gutter px-edge-margin py-section-gap max-w-container-max mx-auto flat no shadows">
+<div class="md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed mb-6 block">KUSUM HOUSE</span>
+<p class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant">© 2024 KUSUM HOUSE. All rights reserved. Crafting Contemporary Heritage.</p>
+</div>
+<div class="md:col-span-3 flex flex-wrap gap-x-8 gap-y-4 justify-start md:justify-end opacity-80 hover:opacity-100 transition-opacity">
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Sarees</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Kurtis</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Lehengas</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">About Us</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Contact</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-on-surface-variant dark:text-outline-variant hover:text-tertiary underline-offset-4 hover:underline transition-all" href="#">Sustainability</a>
+</div>
+</footer>
+<script src="nav.js"></script></body></html>
